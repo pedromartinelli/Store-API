@@ -11,7 +11,7 @@ namespace Store.Domain.Entities
             Customer = customer;
             Date = DateTime.Now;
             Number = Guid.NewGuid().ToString()[..8];
-            _items = new List<OrderItem>();
+            _items = [];
             DeliveryFee = deliveryFee;
             Status = EOrderStatus.WaitingPayment;
             Discount = discount;

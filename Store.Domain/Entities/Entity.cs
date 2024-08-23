@@ -1,6 +1,8 @@
-﻿namespace Store.Domain.Entities
+﻿using Flunt.Notifications;
+
+namespace Store.Domain.Entities
 {
-    public abstract class Entity
+    public abstract class Entity : Notifiable<Notification>
     {
         public Entity()
         {
