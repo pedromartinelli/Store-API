@@ -59,6 +59,5 @@ namespace Store.Domain.Entities
 
         public void Cancel()
             => Status = EOrderStatus.Canceled;
-
     }
 }

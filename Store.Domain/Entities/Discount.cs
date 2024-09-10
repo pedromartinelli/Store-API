@@ -11,7 +11,7 @@
         public decimal Amount { get; private set; }
         public DateTime ExpireDate { get; private set; }
 
-        public bool IsValid()
+        private new bool IsValid()
             => DateTime.Compare(DateTime.Now, ExpireDate) < 0;
 
         public decimal Value()
