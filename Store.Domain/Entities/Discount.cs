@@ -2,12 +2,14 @@
 {
     public class Discount : Entity
     {
-        public Discount(decimal amount, DateTime expireDate)
+        public Discount(string code, decimal amount, DateTime expireDate)
         {
+            Code = code;
             Amount = amount;
             ExpireDate = expireDate;
         }
 
+        public string Code { get; private set; }
         public decimal Amount { get; private set; }
         public DateTime ExpireDate { get; private set; }
 
