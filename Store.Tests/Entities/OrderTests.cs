@@ -9,8 +9,8 @@ namespace Store.Tests.Entities
         private readonly Customer _customer = new("Pedro", "pedro@email.com");
         private readonly Product _product = new("Placa mãe", 850.99M, true);
         private readonly Product _product2 = new("Pasta Térmica", 10.00M, true);
-        private readonly Discount _discount = new(10, DateTime.Now.AddDays(5));
-        private readonly Discount _expiredDiscount = new(10, DateTime.Now.AddDays(-5));
+        private readonly Discount _discount = new("BOIA10", 10, DateTime.Now.AddDays(5));
+        private readonly Discount _expiredDiscount = new("BOIA10", 10, DateTime.Now.AddDays(-5));
 
         [TestMethod]
         [TestCategory("Domain")]
