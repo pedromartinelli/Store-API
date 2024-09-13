@@ -27,6 +27,12 @@ namespace Store.Domain.Commands
 
         public void Validate()
         {
+            foreach (var item in Items)
+            {
+                item.Validate();
+                AddNotifications(item);
+            }
+
             AddNotifications(new Contract<Order>()
                 .Requires()
                 .AreEquals(Customer, 11, "Customer", "Cliente inválido")

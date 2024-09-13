@@ -15,7 +15,7 @@ namespace Store.Tests.Commands
             new CreateOrderItemCommand
             {
                 Product = new Guid(),
-                Quantity = 4
+                Quantity = 0
             },
         ];
 
@@ -23,7 +23,7 @@ namespace Store.Tests.Commands
         [TestCategory("Commands")]
         public void GivenAInvalidCommandOrderShouldNotBeCreated()
         {
-            var command = new CreateOrderCommand("11111111111", "29102-02", "BOIA10", _items);
+            var command = new CreateOrderCommand("11111111111", "29102-023", "BOIA10", _items);
             command.Validate();
             Assert.AreEqual(command.IsValid, false);
         }
